@@ -22,8 +22,8 @@ def snippet_list(request):
         serializer = SnippetSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
-            return JsonResponse(serializer.data, status=201 #created)
-        return JsonResponse(serializer.errors, status=400 #bad request)
+            return JsonResponse(serializer.data, status=201) #created
+        return JsonResponse(serializer.errors, status=400) #bad request
 
 @csrf_exempt
 def snippet_detail(request, pk):
@@ -34,7 +34,7 @@ def snippet_detail(request, pk):
     try:
         snippet = Snippet.objects.get(pk=pk)
     except Snippet.DoesNotExist:
-        return HttpResponse(status=404 #not found)
+        return HttpResponse(status=404) #not found
 
     if request.method == 'GET': # function to display a specific serializer
         serializer = SnippetSerializer(snippet)
@@ -46,8 +46,8 @@ def snippet_detail(request, pk):
         if serializer.is_valid():
             serializer.save()
             return JsonResponse(serializer.data)
-        return JsonResponse(serializer.errors, status=400 #bad request)
+        return JsonResponse(serializer.errors, status=400) #bad request
 
     elif request.method == 'DELETE':
         snippet.delete()
-        return HttpResponse(status=204 #no content)
+        return HttpResponse(status=204) #no content
