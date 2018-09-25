@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'api.v1.snippets.apps.SnippetsConfig',
+    'api.v2.snippets.apps.SnippetsConfig',
 ]
 
 MIDDLEWARE = [
