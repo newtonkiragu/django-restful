@@ -5,7 +5,7 @@ from pygment.styles import get_all_styles
 # getting all lexers from pygment module
 LEXERS = [item for item in get_all_lexers() if item[1]]
 # getting all languages from pygment module
-LANGUAGE_CHOICES = sorted([item[1][0], item[0] for item in LEXERS])
+LANGUAGE_CHOICES = sorted([(item[1][0], item[0]) for item in LEXERS])
 STYLE_CHOICES = sorted((item, item) for item in get_all_styles())
 
 class Snippet(models.Model):
