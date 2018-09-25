@@ -5,8 +5,10 @@ class SnippetSerializer(serializers.ModelSerializer):
     """
      a class that serializes and deserializes the snippet instances into representations such as json.
     """
-    class meta:
-        """docstring for meta."""
+    class Meta:
+        """
+        getting all snippets and adding new snippets
+        """
         model = Snippet
         fields = ('id', 'title', 'code', 'linenos', 'language', 'style')
 
