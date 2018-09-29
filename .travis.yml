@@ -7,12 +7,13 @@ python:
 install:
 
   - pip install -r requirements.txt
-
+  - pip install coveralls 
+  - pip install pytest-cov
   
 
 script:
 
- -  python -m pytest --cov=app
+ -  python -m pytest --cov=snippets
  
 after_success:
 
