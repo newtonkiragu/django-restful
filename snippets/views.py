@@ -5,6 +5,7 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 from snippets.models import Snippet
 from snippets.serializers import SnippetSerializer
+from rest_framework import status
 
 
 @csrf_exempt  # used to prevent cross site request forgery
@@ -24,8 +25,8 @@ def snippet_list(request):
         serializer = SnippetSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
-            return JsonResponse(serializer.data, status=201)  #created
-        return JsonResponse(serializer.errors, status=400)  #bad request
+            return JsonResponse(serializer.data, status.HTTP_201_CREATED)  # created
+        return JsonResponse(serializer.errors, status.HTTP_400_BAD_REQUEST)  # bad request
 
 
 @csrf_exempt
@@ -37,11 +38,11 @@ def snippet_detail(request, pk):
     try:
         snippet = Snippet.objects.get(pk=pk)
     except Snippet.DoesNotExist:
-        return HttpResponse(status=404)  # not found
+        return HttpResponse(status.HTTP_404_NOT_FOUND)  # not found
 
     if request.method == 'GET':  # function to display a specific serializer
         serializer = SnippetSerializer(snippet)
-        return JsonResponse(serializer.data)
+        return JsonResponse(serializer.data, status.HTTP_200_OK)
 
     elif request.method == 'PUT':  # function to edit a serializer
         data = JSONParser().parse(request)
@@ -49,8 +50,8 @@ def snippet_detail(request, pk):
         if serializer.is_valid():
             serializer.save()
             return JsonResponse(serializer.data)
-        return JsonResponse(serializer.errors, status=400)  # bad request
+        return JsonResponse(serializer.errors, status.HTTP_400_BAD_REQUEST)  # bad request
 
     elif request.method == 'DELETE':
         snippet.delete()
-        return HttpResponse(status=204)  # no content
+        return HttpResponse(status.HTTP_204_NO_CONTENT)  # no content
