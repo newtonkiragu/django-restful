@@ -3,7 +3,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/f255d310fa438c258136/maintainability)](https://codeclimate.com/github/newtonkiragu/django-restful/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/f255d310fa438c258136/test_coverage)](https://codeclimate.com/github/newtonkiragu/django-restful/test_coverage)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/newtonkiragu/django-restful/blob/master/LICENSE)
-
+[![Coverage Status](https://coveralls.io/repos/github/newtonkiragu/django-restful/badge.svg)](https://coveralls.io/github/newtonkiragu/django-restful)
 #### PasteBin Clone
 
 ## Description
