@@ -4,6 +4,7 @@
 ## Description
 A pastebin or text storage site is a type of online content hosting service where users can store plain text, e.g. to source code snippets for code review via Internet Relay Chat. This application allows users to paste their code and share it with others for code review.
 
+[![Build Status](https://travis-ci.com/newtonkiragu/django-restful.svg?branch=master)](https://travis-ci.com/newtonkiragu/django-restful)
 #### Link to deployed site
 coming soon :-)
 
