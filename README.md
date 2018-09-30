@@ -10,17 +10,26 @@
 A pastebin or text storage site is a type of online content hosting service where users can store plain text, e.g. to source code snippets for code review via Internet Relay Chat. This application allows users to paste their code and share it with others for code review.
 
 #### Link to deployed site
-coming soon :-)
+http://pasteb1n.herokuapp.com/
 
 ## Table of content
 1. [Description](#description)
-2. [Setup and installations](#setup-and-installations)
-3. [Deployment](#deployment)
-4. [Contributing](#contributing)
-5. [Bugs](#bugs)
-6. [Contact me](#support-and-contact-details)
-7. [Licensing](#license)
+2. [API endpoints](#endpoints)
+3. [Setup and installations](#setup-and-installations)
+4. [Deployment](#deployment)
+5. [Contributing](#contributing)
+6. [Bugs](#bugs)
+7. [Contact me](#support-and-contact-details)
+8. [Licensing](#license)
 
+## endpoints
+API Endpoint | Description | Request
+---- | :---- | :----- |
+http://pasteb1n.herokuapp.com/snippets/ | Display a JSON object containing all snippets | GET
+http://pasteb1n.herokuapp.com/snippets/ | Create a new snippet | POST
+http://pasteb1n.herokuapp.com/snippet/1/ | Display a JSON object of a specific snippet | GET
+http://pasteb1n.herokuapp.com/snippet/1/ | Edit a snippet | PUT
+http://pasteb1n.herokuapp.com/snippet/1/ | Delete a snippet | DELETE
 
 ## Setup and installations
 
