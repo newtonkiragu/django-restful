@@ -25,8 +25,8 @@ def snippet_list(request):
         serializer = SnippetSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
-            return JsonResponse(serializer.data, status.HTTP_201_CREATED)  # created
-        return JsonResponse(serializer.errors, status.HTTP_400_BAD_REQUEST)  # bad request
+            return JsonResponse(serializer.data, status=status.HTTP_201_CREATED)  # created
+        return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)  # bad request
 
 
 @csrf_exempt
@@ -42,7 +42,7 @@ def snippet_detail(request, pk):
 
     if request.method == 'GET':  # function to display a specific serializer
         serializer = SnippetSerializer(snippet)
-        return JsonResponse(serializer.data, status.HTTP_200_OK)
+        return JsonResponse(serializer.data, status=status.HTTP_200_OK)
 
     elif request.method == 'PUT':  # function to edit a serializer
         data = JSONParser().parse(request)
@@ -50,7 +50,7 @@ def snippet_detail(request, pk):
         if serializer.is_valid():
             serializer.save()
             return JsonResponse(serializer.data)
-        return JsonResponse(serializer.errors, status.HTTP_400_BAD_REQUEST)  # bad request
+        return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)  # bad request
 
     elif request.method == 'DELETE':
         snippet.delete()
