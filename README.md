@@ -1,10 +1,14 @@
 # PasteBin clone
+[![Build Status](https://travis-ci.com/newtonkiragu/django-restful.svg?branch=master)](https://travis-ci.com/newtonkiragu/django-restful)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f255d310fa438c258136/maintainability)](https://codeclimate.com/github/newtonkiragu/django-restful/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/f255d310fa438c258136/test_coverage)](https://codeclimate.com/github/newtonkiragu/django-restful/test_coverage)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/newtonkiragu/django-restful/blob/master/LICENSE)
+
 #### PasteBin Clone
 
 ## Description
 A pastebin or text storage site is a type of online content hosting service where users can store plain text, e.g. to source code snippets for code review via Internet Relay Chat. This application allows users to paste their code and share it with others for code review.
 
-[![Build Status](https://travis-ci.com/newtonkiragu/django-restful.svg?branch=master)](https://travis-ci.com/newtonkiragu/django-restful)
 #### Link to deployed site
 coming soon :-)
 
