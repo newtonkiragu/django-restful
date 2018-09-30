@@ -13,7 +13,7 @@ install:
 
 script:
 
- -  python -m pytest --cov=snippets
+ -  python manage.py test --cov=snippets
  
 after_success:
 
