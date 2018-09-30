@@ -1,22 +1,15 @@
 language: python
-
 python:
-
-  - "3.6-dev"
-
+- '3.6'
 install:
-
-  - pip install -r requirements.txt
-  - pip install coveralls 
-  - pip install pytest-cov
-  
-
+- pip install -r requirements.txt
+- pip install coveralls
+- pip install pytest-cov
 script:
-
- -  python manage.py test --cov=snippets
- 
+- python manage.py test --with-coverage --cov=snippets
 after_success:
-
-  - coveralls
-  
-  
+- coveralls
+env:
+  global:
+  - secure: pQz5fqYLfIU5Ly0JGoXb87df/XM7U4yY2914ht0Cnsn9rVXnlZwRHv/u6t/q51p4BCSyz7E4N5jAXauLkwRmN5q+DyVxjNigoDsj1qpiGGnJHleUP61Hl5Q6opI7eUZQ+NwxSGFEY6xyj8oXOCxgL2JaaRIWOJmCopsarx8nxbXziJ/HDBIPn6k+eN5SmPv6ooBUk/7CKJPLr+F2hBHtFCYUJq5SXVJ6JeMfcckdDjjlk6J7APXHI7mvfs+vTSeS4wYK9j1+tXyvgjPzz+So1uls0m2R+nxbsEgzADZnurLSx7oQI1ZakKY3KZUV7G7JGtCkQCDrB36rge93gRHDtWwsOMTqUvCxehIUa8doKbk2STL5rMmPRpRHZUXx1DEK0q7kzvaqx4G4JizDak2TIsMCzIethtGLAw3DmTS7zlPYDN/xNOeRnYUi9toz5XWIgmeQYXPnH5yyrgZnKTZTqbyH2IUliLA6AL6dYQi8Ttq8Ow8N9N+TS81pfhmoFqcfRlCQ50vwPR+/WZhKFDEsEDnl42TBeoPW4Oc4arsz0ZkO2oQV6/3bLvkEF7CiVSnK+o6FelTeSoQySEg09NWfd9ZgvZ/D9koXWqsme76Uk0Uf1TR/iHO5TqbokQt/ANmjrhtCO36BZkIITHU7pbF747IZ9fgbebbDxx+OedL9hk8=
+  - secure: LEv1/prflLuu2FS1yig94yB3bIe3gBXKdQAxT0OAEcIZwTxZ9RG+7O0QS+bHNOAdL2vWO7G8JTazSk618pXMJa0p70FAPuzn29nsE+d6QFoQTKVajfUTjQYKGk0rN627ST8aQ0CMD2BDpleS9BxP9VJNVv3Z03tNvqcRhygeJKqvzC2C2hqNIGUEOt80/OJ/f7v9KlrdSEmj5jlRRinokAINgdp4w4L/0fx0K8SItyQA9SY230jliQxhnyIIt0xNW4SA49G30F9BK93SDI97qah4zexvRrPoqQCTRR6X4/gKvk8Q95KCgNR99Ythu4PNrr6zTcDBg4tlFq+sqxbWTSRoGqRFzwLdAqp2fuXModEjwyFF0+I9GK0/aVk/S9Y4Y24jUb6Xm93ROMzuwgsV53yjvJoHczv4PsSBxTNR3bPjQ8zb9T5cETeeluTm5jBlqYcJUJQas+dPwe3nt5NMPyZ8Ff/slVhvNnDNQ3KYO8uEvD5MkUPupfy79jw4RyFWW4jRIv/PWQLr3Pksj0HY0Dlmz2M0A+hyOQu516r1lkrs4MbC2GjfVJ6vLApahQm8qjQYe955hmJ5ennl/maBMGV+hN8PONPFw7gaXhzWLPqd8jBIjdZus9iUtmq+qf75juPFZMDCtDoQO0fw1UkMsKsCWBG0zvwbiRkYdr0L0fg=
