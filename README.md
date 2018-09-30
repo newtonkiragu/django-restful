@@ -95,12 +95,13 @@ To deploy the application, please follow the instructions in [this gist](https:/
 Please read this [comprehensive guide](https://opensource.guide/how-to-contribute/) on how to contribute. Pull requests are welcome :-)
 
 ## Bugs
-Create an issue mentioning the bug you have found
+[Create an issue](https://github.com/newtonkiragu/django-restful/blob/master/.github/ISSUE_TEMPLATE/bug_report.md) mentioning the bug you have found
 
 #### Known bugs
- - cannot subscribe to email list in live application
+ - none yet
 
-
+#### Feature request
+[Create an issue](https://github.com/newtonkiragu/django-restful/blob/master/.github/ISSUE_TEMPLATE/feature_request.md) mentioning the feature you would like implemented
 
 ## Support and contact details
 Contact [Newton Karanu](karanunewton4@gmail.com) for further help/support
