@@ -44,10 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'snippets.apps.SnippetsConfig'
-    # 'api.v1.snippets.apps.SnippetsConfig',
-    # 'api.v2.snippets.apps.SnippetsConfig',
 ]
-
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

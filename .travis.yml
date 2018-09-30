@@ -6,7 +6,7 @@ install:
 - pip install coveralls
 - pip install pytest-cov
 script:
-- python manage.py test --with-coverage --cov=snippets
+- python -m pytest --cov=snippets
 after_success:
 - coveralls
 env:
