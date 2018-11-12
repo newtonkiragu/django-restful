@@ -9,13 +9,15 @@ class SnippetSerializer(serializers.ModelSerializer):
      into representations such as json.
     """
     owner = serializers.ReadOnlyField(source='owner.username')
+    highlight = serializers.HyperlinkedIdentityField(
+        view_name='snippet-highlight', format='html')
 
     class Meta:
         """
         getting all snippets and adding new snippets
         """
         model = Snippet
-        fields = ('id', 'title', 'code', 'linenos',
+        fields = ('url', 'id', 'highlight', 'title', 'code', 'linenos',
                   'language', 'style', 'owner')
 
 
@@ -24,9 +26,9 @@ class UserSerializer(serializers.ModelSerializer):
     a class that serializes and desirializes the user
     instances into representaion
     """
-    snippets = serializers.PrimaryKeyRelatedField(
-        many=True, queryset=Snippet.objects.all())
+    snippets = serializers.HyperlinkedRelatedField(
+        many=True, view_name='snippet-detail', read_only=True)
 
     class Meta:
         model = User
-        fields = ('id', 'username', 'snippets')
+        fields = ('url', 'id', 'username', 'snippets')
