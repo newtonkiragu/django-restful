@@ -8,7 +8,7 @@ install:
 - pip install pytest-cov
 
 script:
-- python -m pytest --cov=tutorial
+- python -m pytest --cov=snippets
 
 after_success:
 - coveralls
